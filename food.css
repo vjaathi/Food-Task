@@ -1,0 +1,395 @@
+/* Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+}
+
+/* Variables */
+
+:root{
+    /* colors */
+    --LINKCOLOR:rgb(26, 107, 15);
+    --BSHADOW:5px 6px 5px -5px black;
+    --TSHADOW:2px 4px 7px  rgb(94, 54, 54);
+    --BGCOLOR: beige;
+    --DARKCOLOR:black;
+    --LIGRACOLOR:linear-gradient(rgba(255, 192, 203, 0.685),white,rgba(255, 166, 0, 0.671));
+
+    /* Gentral */
+    --DFLEX:flex;
+    --PADING-S:.5rem;
+    --PADING-M:1rem;
+    --BRADIES:20px;
+    --POSON:absolute;
+
+    /* font */
+    --FS-S:1rem;
+    --FS-M:2.2rem;
+    --FS-XL:2.8rem;
+}
+
+/* Header */
+
+header{
+    display: var(--DFLEX);
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: var(--BSHADOW);
+    padding: var(--PADING-S);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color:var(--BGCOLOR);
+}
+
+.right-side a{
+    text-decoration: none;
+    color: var(--LINKCOLOR);
+    font-size: 1.5rem;
+}
+
+.right-side li a:hover{
+    display: block;
+    transition: all 2s ;
+    color: black;
+    transform: rotatex(90deg);
+}
+
+.left-side h1{
+    font-size: var(--FS-XL);
+  margin-right: 5rem;
+  text-shadow: var(--TSHADOW);
+}
+
+.left-side{
+    display: var(--DFLEX);
+}
+
+.right-side li{
+   display: inline;
+   margin-inline: 2rem;
+}
+
+.right-side{
+    display: var(--DFLEX);
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+   margin-left: 10rem;
+}
+
+/* Banner-1 */
+
+.banner{
+    background-color: rgb(188, 184, 192);
+    background-image: url(img/bg.jpg);
+    margin: 1rem;
+    height: 500px;
+    position: relative;
+}
+
+.banner img{
+    position: var(--POSON);
+    width: 450px;
+    height:100px;
+   margin-left: 600px;
+   top: 330px;
+   border-radius: var(--BRADIES);
+
+}
+
+.inbox{
+    position: var(--POSON);
+    left: 150px;
+    background-image: radial-gradient(red .5%,black 70%);
+    padding: 1rem;
+    color: antiquewhite;
+    border-radius: var(--BRADIES);
+    box-shadow: var(--BRADIES);
+}
+
+.inbox h2{
+    font-size: var(--FS-S);
+    text-align: center;
+    color: aqua;
+    line-height: 2rem;
+}
+
+.btn1{
+    position: var(--POSON);
+    top: 120px;
+    left: 250px;
+    background-color: green;
+    padding: 1rem;
+    border-radius: var(--BRADIES);
+    color: white;
+    font-size: var(--FS-S);
+    border: none;
+}
+
+.banner a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* about */
+
+.about{
+    scroll-margin-top: 8rem;
+    background-image: url(img/img1.avif);
+    height: 300px;
+    background-size: cover;
+    margin: 2rem;
+    position: relative;
+}
+
+.inbox2{
+    position: var(--POSON);
+    border: 2px solid black;
+    width: 300px;
+    margin: 2rem;
+    padding: var(--PADING-M);
+    font-size: .7rem;
+    background-image: var(--LIGRACOLOR);
+    border-radius: var(--BRADIES);
+    
+}
+
+.category{
+    scroll-margin-top: 8rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin: 4rem 12rem;
+    position: relative;
+    
+}
+
+.category img{
+    margin-top: 3.5rem;
+}
+
+.tooltip{
+    position: relative;
+}
+
+.tooltip:hover::before{
+    content: attr(data-tooltip);
+    position:var(--POSON);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 260px;
+    font-size: var(--FS-M);
+    background-color: black;
+    color: white;
+    animation: 3s  1 forwards slide ;
+    
+}
+
+ @keyframes slide{
+    0%{
+        transform: translateY(0);
+        
+    }
+
+    45%{
+        transform: rotate(180deg);
+        border-radius: 20px;
+    }
+    
+    100%{
+        transform: translateY(-250px);
+        background-color: aquamarine;
+        color: brown;
+        border-radius: 20px;
+    }
+
+}  
+
+.type{
+    position:var(--POSON);
+    top: 0;
+}
+
+/* Food-Menu */
+
+.f-menu{
+    scroll-margin-top: 8rem;
+    margin: 4rem;
+    background-color: rgb(185, 128, 42);
+    border-radius: var(--POSON);
+}
+
+.f-menu h1{
+ 
+    text-align: center;
+    padding: var(--PADING-M);
+    font-size: var(--FS-XL);
+   
+   
+ 
+}
+
+.f-menu1{
+    margin: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    
+}
+
+.f1{
+    /* background-color: rgb(102, 102, 187); */
+    padding: var(--PADING-M);
+    display: flow-root;
+    width: 600px;
+    white-space: wrap;
+   
+}
+
+.f1 img{
+    float: left;
+    width: 320px;
+    height: 250px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.f1 h2,span{
+    margin: .3rem;
+    font-size:var(--FS-M);
+    text-align: flex-start;
+}
+
+/* Reviwes */
+
+.review{
+    scroll-margin-top: 8rem;
+    margin: 3rem 2rem;
+    background-color: rgb(139, 219, 58);
+   
+}
+
+.flex{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.review h1{
+    text-align: center;
+   font-size: var(--FS-M);
+   padding: var(--PADING-M);
+}
+
+.cos-1{
+    margin: 1rem;
+    border: 2px solid black;
+    width: 300px;
+    padding: var(--PADING-S);
+    text-align: center;
+    background-color: whitesmoke;
+ 
+}
+
+.r1 img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.rate img{
+    width: 130px;
+    height: 30px;
+}
+
+/* contact */
+
+.contact{
+    scroll-margin-top: 8rem;
+    background-color: rgb(143, 97, 187);
+    background-image: repeating-radial-gradient(rgba(255, 166, 0, 0.808),pink);
+    margin: 2rem;
+    border-radius: 20px;
+   
+}
+
+.contact h1{
+    text-align: center;
+    padding:var(--PADING-M);
+    font-size: var(--FS-XL);
+}
+
+.contact-item{
+    position: relative;
+    margin: 2rem;
+    
+}
+
+.contact-item input{
+    left: 40%;
+    height: 50px;
+    width: 300px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: var(--FS-S);
+}
+
+.name{
+    position: var(--POSON);
+    top: 0 ;
+}
+
+.email{
+    position: var(--POSON);
+    top: 70px;
+}
+
+.message{
+    position: var(--POSON);
+    top: 140px;
+}
+.contact-item img{
+    margin-right: 2rem;
+    width: 400px;
+    height: 300px;
+}
+
+.contact-item a{
+    text-decoration: none;
+    color: var(--DARKCOLOR);
+    font-weight: bold;
+}
+
+.btn-1{
+    position: var(--POSON);
+    top: 210px;
+    left: 40%;
+    width: 90px;
+    height: 50px;
+    border-radius: var(--BRADIES);
+    background-color: greenyellow;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
